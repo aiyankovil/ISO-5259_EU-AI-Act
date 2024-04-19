@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix euai: <http://example.org/euai/>.
+@prefix iso: <http://example.org/iso/>.
+
+# EU AI Act Ontology
+euai:HighRiskAISystem rdfs:subClassOf iso:ArtificialIntelligenceSystem.
+euai:Requirement rdfs:subClassOf iso:QualityRequirement.
+euai:DataAndDataGovernanceReqColl rdfs:subClassOf euai:HighRiskAISystem.
+euai:DataGovernancePractices rdfs:subClassOf iso:DataGovernance.
+euai:DataManagementPractices rdfs:subClassOf iso:DataManagement.
+euai:DataPreparationOperations rdfs:subClassOf iso:DataPreparation.
+euai:Bias rdfs:subClassOf iso:AlgorithmicBias.
+euai:HighRiskAIProvider rdfs:subClassOf iso:ArtificialIntelligenceProvider.
+euai:NotifiedBody rdfs:subClassOf iso:ConformityAssessmentBody.
