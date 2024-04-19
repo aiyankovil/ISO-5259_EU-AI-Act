@@ -1,0 +1,153 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/ontology/> .
+
+# Concepts
+ex:QualityReportRequirements rdf:type skos:Concept ;
+    skos:prefLabel "Quality Report Requirements" .
+
+ex:QualityCulture rdf:type skos:Concept ;
+    skos:prefLabel "Quality Culture" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:ManagementOfDataQualityAnomalies rdf:type skos:Concept ;
+    skos:prefLabel "Management of Data Quality Anomalies" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:CompetenceManagement rdf:type skos:Concept ;
+    skos:prefLabel "Competence Management" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:ResourceManagement rdf:type skos:Concept ;
+    skos:prefLabel "Resource Management" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:DataQualityAuditAndAssessment rdf:type skos:Concept ;
+    skos:prefLabel "Data Quality Audit and Assessment" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:ProjectSpecificDataQualityManagement rdf:type skos:Concept ;
+    skos:prefLabel "Project-specific Data Quality Management" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:DataQualityManagementLifeCycle rdf:type skos:Concept ;
+    skos:prefLabel "Data Quality Management Life Cycle" ;
+    skos:broader ex:QualityReportRequirements .
+
+# Narrower Concepts (Subclasses)
+ex:DataQualityRequirements rdf:type skos:Concept ;
+    skos:prefLabel "Data Quality Requirements" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:ProcessQualityRequirements rdf:type skos:Concept ;
+    skos:prefLabel "Process Quality Requirements" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:DocumentationQualityRequirements rdf:type skos:Concept ;
+    skos:prefLabel "Documentation Quality Requirements" ;
+    skos:broader ex:QualityReportRequirements .
+
+ex:EstablishingQualityPolicies rdf:type skos:Concept ;
+    skos:prefLabel "Establishing Quality Policies" ;
+    skos:broader ex:QualityCulture .
+
+# Subclasses for Management of Data Quality Anomalies
+ex:DataIssueIdentification rdf:type skos:Concept ;
+    skos:prefLabel "Data Issue Identification" ;
+    skos:broader ex:ManagementOfDataQualityAnomalies .
+
+ex:DataIssueAnalysis rdf:type skos:Concept ;
+    skos:prefLabel "Data Issue Analysis" ;
+    skos:broader ex:ManagementOfDataQualityAnomalies .
+
+ex:DataIssueResolution rdf:type skos:Concept ;
+    skos:prefLabel "Data Issue Resolution" ;
+    skos:broader ex:ManagementOfDataQualityAnomalies .
+
+ex:DataIssueDocumentation rdf:type skos:Concept ;
+    skos:prefLabel "Data Issue Documentation" ;
+    skos:broader ex:ManagementOfDataQualityAnomalies .
+
+# Subclasses for Competence Management
+ex:SkillAssessment rdf:type skos:Concept ;
+    skos:prefLabel "Skill Assessment" ;
+    skos:broader ex:CompetenceManagement .
+
+ex:TrainingPrograms rdf:type skos:Concept ;
+    skos:prefLabel "Training Programs" ;
+    skos:broader ex:CompetenceManagement .
+
+ex:CertificationProcesses rdf:type skos:Concept ;
+    skos:prefLabel "Certification Processes" ;
+    skos:broader ex:CompetenceManagement .
+
+ex:KnowledgeManagement rdf:type skos:Concept ;
+    skos:prefLabel "Knowledge Management" ;
+    skos:broader ex:CompetenceManagement .
+
+# Subclasses for Resource Management
+ex:HumanResources rdf:type skos:Concept ;
+    skos:prefLabel "Human Resources" ;
+    skos:broader ex:ResourceManagement .
+
+ex:TechnologicalResources rdf:type skos:Concept ;
+    skos:prefLabel "Technological Resources" ;
+    skos:broader ex:ResourceManagement .
+
+ex:FinancialResources rdf:type skos:Concept ;
+    skos:prefLabel "Financial Resources" ;
+    skos:broader ex:ResourceManagement .
+
+ex:InfrastructureResources rdf:type skos:Concept ;
+    skos:prefLabel "Infrastructure Resources" ;
+    skos:broader ex:ResourceManagement .
+
+# Subclasses for Data Quality Audit and Assessment
+ex:InternalDataQualityAudits rdf:type skos:Concept ;
+    skos:prefLabel "Internal Data Quality Audits" ;
+    skos:broader ex:DataQualityAuditAndAssessment .
+
+ex:ExternalDataQualityAudits rdf:type skos:Concept ;
+    skos:prefLabel "External Data Quality Audits" ;
+    skos:broader ex:DataQualityAuditAndAssessment .
+
+ex:ContinuousDataQualityAssessment rdf:type skos:Concept ;
+    skos:prefLabel "Continuous Data Quality Assessment" ;
+    skos:broader ex:DataQualityAuditAndAssessment .
+
+ex:PeriodicDataQualityReviews rdf:type skos:Concept ;
+    skos:prefLabel "Periodic Data Quality Reviews" ;
+    skos:broader ex:DataQualityAuditAndAssessment .
+
+# Subclasses for Data Quality Management Life Cycle
+ex:DataMotivationAndConceptualization rdf:type skos:Concept ;
+    skos:prefLabel "Data Motivation and Conceptualization" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
+
+ex:DataSpecification rdf:type skos:Concept ;
+    skos:prefLabel "Data Specification" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
+
+ex:DataPlanning rdf:type skos:Concept ;
+    skos:prefLabel "Data Planning" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
+
+ex:DataAcquisition rdf:type skos:Concept ;
+    skos:prefLabel "Data Acquisition" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
+
+ex:DataPreprocessing rdf:type skos:Concept ;
+    skos:prefLabel "Data Preprocessing" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
+
+ex:DataAugmentation rdf:type skos:Concept ;
+    skos:prefLabel "Data Augmentation" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
+
+ex:DataProvisioning rdf:type skos:Concept ;
+    skos:prefLabel "Data Provisioning" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
+
+ex:DataDecommissioning rdf:type skos:Concept ;
+    skos:prefLabel "Data Decommissioning" ;
+    skos:broader ex:DataQualityManagementLifeCycle .
