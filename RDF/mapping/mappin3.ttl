@@ -1,0 +1,49 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix euai: <http://example.org/euai#> .
+@prefix iso5259: <http://example.org/iso5259#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# EU AI Act Ontology Concepts
+euai:Accountability a skos:Concept ;
+    rdfs:label "Accountability" .
+
+euai:BiasMitigation a skos:Concept ;
+    rdfs:label "Bias Mitigation" .
+
+euai:Explainability a skos:Concept ;
+    rdfs:label "Explainability" .
+
+euai:Interpretability a skos:Concept ;
+    rdfs:label "Interpretability" .
+
+euai:EthicalPrinciples a skos:Concept ;
+    rdfs:label "Ethical Principles" .
+
+euai:Transparency a skos:Concept ;
+    rdfs:label "Transparency" .
+
+euai:Fairness a skos:Concept ;
+    rdfs:label "Fairness" .
+
+euai:AlgorithmicFairness a skos:Concept ;
+    rdfs:label "Algorithmic Fairness" .
+
+euai:Equity a skos:Concept ;
+    rdfs:label "Equity" .
+
+# ISO 5259 Ontology Concepts
+iso5259:Accountability a skos:Concept ;
+    rdfs:label "Accountability" .
+
+iso5259:Explainability a skos:Concept ;
+    rdfs:label "Explainability" .
+
+iso5259:Transparency a skos:Concept ;
+    rdfs:label "Transparency" .
+
+iso5259:AlgorithmicFairness a skos:Concept ;
+    rdfs:label "Algorithmic Fairness" .
+
+# Mapping Relations
+euai:Transparency skos:exactMatch iso5259:Transparency .
+euai:Fairness skos:relatedMatch iso5259:AlgorithmicFairness .
