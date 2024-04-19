@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix euai: <http://example.org/euai/>.
+@prefix euai-req: <http://example.org/euai/requirements/>.
+
+# Classes
+euai:Requirement a rdfs:Class;
+    rdfs:label "Requirement";
+    rdfs:comment "A requirement specified by the EU AI Act."@en.
+
+euai:HighRiskAISystem a rdfs:Class;
+    rdfs:label "High-risk AI system";
+    rdfs:comment "An AI system considered to pose significant risks to health, safety, or fundamental rights."@en.
+
+euai:DataAndDataGovernanceReqColl a rdfs:Class;
+    rdfs:label "Data and data governance requirements collection";
+    rdfs:comment "A collection of requirements related to data governance and management for AI systems."@en.
+
+euai:DataGovernancePractices a skos:Concept;
+    skos:prefLabel "Data governance practices";
+    skos:definition "Practices related to the management and control of data within an organization."@en.
+
+euai:DataManagementPractices a skos:Concept;
+    skos:prefLabel "Data management practices";
+    skos:definition "Practices related to the handling and manipulation of data within an organization."@en.
+
+euai:DataPreparationOperations a skos:Concept;
+    skos:prefLabel "Data preparation operations";
+    skos:definition "Operations involved in preparing data for use in AI systems, such as annotation, labeling, cleaning, enrichment, and aggregation."@en.
+
+euai:Bias a skos:Concept;
+    skos:prefLabel "Bias";
+    skos:definition "Systematic errors in data or algorithms that result in unfair or discriminatory outcomes."@en.
+
+euai:HighRiskAIProvider a rdfs:Class;
+    rdfs:label "High-risk AI provider";
+    rdfs:comment "An entity responsible for developing and deploying high-risk AI systems."@en.
+
+euai:NotifiedBody a rdfs:Class;
+    rdfs:label "Notified body";
+    rdfs:comment "An organization designated by regulatory authorities to assess the conformity of AI systems with applicable regulations."@en.
+
+# Properties
+euai:hasRequirement a rdf:Property;
+    rdfs:label "has requirement";
+    rdfs:domain euai:HighRiskAISystem;
+    rdfs:range euai-req:Requirement.
+
+# Subclasses
+euai:DataAndDataGovernanceReqColl rdfs:subClassOf euai:HighRiskAISystem.
+euai:PostMarketMonitoringByProvidersAndPostMarketMonitoringPlanForHighRiskAiSystemsReqColl rdfs:subClassOf euai:HighRiskAISystem.
+
+# Hierarchical Relationships
+euai:DataGovernancePractices skos:broader euai:DataManagementPractices.
+
+# Additional concepts, classes, properties, and relationships can be added similarly
